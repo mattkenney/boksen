@@ -80,8 +80,7 @@ router.all('/:key/', function (req, res, next) {
       err.status = 404;
       return next(err);
     }
-    req.locals = req.locals || {};
-    req.locals.name = name;
+    res.locals.name = name;
     next();
   });
 });
