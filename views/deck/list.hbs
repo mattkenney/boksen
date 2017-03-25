@@ -1,13 +1,15 @@
 <div class="box">
   <h3 class="title">Flashcard Decks</h3>
-  <ul>
-    {{#each decks}}
-      <li><a href="{{this.key}}/">{{this.name}}</a></li>
-    {{else}}
-      <li><i>no decks</i></li>
-    {{/each}}
-  </ul>
-  <div>
+  <div class="container">
+    <ul style="margin-bottom:1em">
+      {{#each decks}}
+        <li><a href="{{this.key}}/">{{this.name}}</a></li>
+      {{else}}
+        <li><i>no decks</i></li>
+      {{/each}}
+    </ul>
+  </div>
+  <div class="container">
     <form action="./" method="post">
       <div class="control">
         <input class="button" type="submit" value="New deck" />
