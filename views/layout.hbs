@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Boksen</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <nav class="nav has-shadow">
+      <div class="nav-left">
+        <a href="/" class="nav-item">Boksen</a>
+      </div>
+    </nav>
+    <div class="section">
+      <div class="container">
+        {{#with flash}}
+          {{#each error}}
+            <div class="message is-danger">
+              <div class="message-header">Error</div>
+              <div class="message-body">{{this}}</div>
+            </div>
+          {{/each}}
+          {{#each info}}
+            <div class="message is-danger">
+              <div class="message-header">Info</div>
+              <div class="message-body">{{this}}</div>
+            </div>
+          {{/each}}
+          {{#each success}}
+            <div class="message is-danger">
+              <div class="message-header">Success</div>
+              <div class="message-body">{{this}}</div>
+            </div>
+          {{/each}}
+          {{#each warning}}
+            <div class="message is-danger">
+              <div class="message-header">Warning</div>
+              <div class="message-body">{{this}}</div>
+            </div>
+          {{/each}}
+        {{/with}}
+        {{{body}}}
+      </div>
+    </div>
+    {{{ browserSync }}}
+  </body>
+</html>

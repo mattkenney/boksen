@@ -1,0 +1,25 @@
+<div class="box">
+  <form action="./" enctype="multipart/form-data" method="post">
+    <h3 class="title">New Deck</h3>
+    <div class="field">
+      <p class="control">
+        <label class="label">Name
+          <input class="input" name="name" type="text" value="{{ name }}" />
+        </label>
+      </p>
+    </div>
+    <div class="field">
+      <p class="control">
+        <label class="label">Questions (*.csv)
+          <input class="input" name="file" type="file" value="" />
+        </label>
+      </p>
+    </div>
+    <div class="field">
+      <p class="control">
+        <input class="button is-primary" type="submit" value="Create" />
+        <a href="/deck" class="button">Cancel</a>
+      </p>
+    </div>
+  </form>
+</div>

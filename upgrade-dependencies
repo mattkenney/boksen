@@ -1,0 +1,7 @@
+#!/bin/sh
+for package in $(jq .dependencies package.json |jq keys|jq .[] -r); do
+    yarn upgrade $package
+done
+for package in $(jq .devDependencies package.json |jq keys|jq .[] -r); do
+    yarn upgrade $package
+done

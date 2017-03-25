@@ -1,0 +1,17 @@
+<div class="box">
+  <form action="quiz" method="post">
+    <input name="term" type="hidden" value="{{ term }}" />
+    <input name="box" type="hidden" value="{{ box }}" />
+    <input name="definition" type="hidden" value="{{ definition }}" />
+    <div>
+      <dt>{{ term }}</dt>
+      <dd>{{ definition }}</dd>
+    </div>
+    <div class="block">
+      <button class="button is-danger" name="move" type="submit" value="0">Wrong</button>
+      <button class="button is-warning" name="move" type="submit" value="-1">Weak</button>
+      <button class="button is-success" name="move" type="submit" value="1">Strong</button>
+      <button class="button" name="edit" type="submit" value="1">Edit</button>
+    </div>
+  </form>
+</div>

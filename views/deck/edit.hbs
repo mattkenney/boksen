@@ -1,0 +1,17 @@
+<div class="box">
+  <form action="quiz" method="post">
+    <input name="term" type="hidden" value="{{ term }}" />
+    <input name="box" type="hidden" value="{{ box }}" />
+    <div class="field">
+      <p class="control">
+        <label class="label">{{ term }}
+          <input class="input" name="definition" type="text" value="{{ definition }}" />
+        </label>
+      </p>
+    </div>
+    <div class="block">
+      <button class="button is-primary" type="submit" name="save" value="1">Save</button>
+      <button class="button" type="submit" name="show" value="1">Cancel</button>
+    </div>
+  </form>
+</div>
